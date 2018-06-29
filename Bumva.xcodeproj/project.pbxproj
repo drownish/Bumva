@@ -8,8 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		1EBE140A2EFA409B34CAF8EB /* Pods_Bumva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3073E37E73181CEEA3AE1A04 /* Pods_Bumva.framework */; };
+		FA6C43E620CE7A65007860D8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C43E520CE7A65007860D8 /* LoginController.swift */; };
+		FA6C43E820CE7A94007860D8 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C43E720CE7A94007860D8 /* RegistrationController.swift */; };
+		FA6C43EA20CED28D007860D8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA6C43E920CED28D007860D8 /* Info.plist */; };
+		FA6C43EC20CED483007860D8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C43EB20CED483007860D8 /* TabBarController.swift */; };
+		FA6C43EE20CED510007860D8 /* MainSalesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C43ED20CED510007860D8 /* MainSalesListController.swift */; };
+		FA6C43F020CED744007860D8 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C43EF20CED744007860D8 /* ProfileController.swift */; };
+		FA6C43F320CEE02A007860D8 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C43F220CEE02A007860D8 /* MainCell.swift */; };
+		FA6C43F520CEE042007860D8 /* MainCellWithPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C43F420CEE042007860D8 /* MainCellWithPhoto.swift */; };
+		FA6C43F820CEE569007860D8 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C43F720CEE569007860D8 /* model.swift */; };
+		FA6C446220D6FF31007860D8 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C446120D6FF31007860D8 /* LoadingController.swift */; };
+		FA6C446420D7B52C007860D8 /* EditCatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C446320D7B52C007860D8 /* EditCatsCell.swift */; };
+		FA6C446620D7B562007860D8 /* EditCatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C446520D7B562007860D8 /* EditCatsController.swift */; };
+		FA6C446820D7EBAA007860D8 /* RegCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C446720D7EBAA007860D8 /* RegCityCell.swift */; };
 		FA76982F20CDAFC30053A960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76982E20CDAFC30053A960 /* AppDelegate.swift */; };
-		FA76983120CDAFC30053A960 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76983020CDAFC30053A960 /* ViewController.swift */; };
 		FA76983420CDAFC30053A960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA76983220CDAFC30053A960 /* Main.storyboard */; };
 		FA76983620CDAFC60053A960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA76983520CDAFC60053A960 /* Assets.xcassets */; };
 		FA76983920CDAFC60053A960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA76983720CDAFC60053A960 /* LaunchScreen.storyboard */; };
@@ -19,13 +31,24 @@
 		134474CC5759C517AE3402F7 /* Pods-Bumva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumva.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bumva/Pods-Bumva.release.xcconfig"; sourceTree = "<group>"; };
 		2EE0FAD6A85B95230BA71100 /* Pods-Bumva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumva.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bumva/Pods-Bumva.debug.xcconfig"; sourceTree = "<group>"; };
 		3073E37E73181CEEA3AE1A04 /* Pods_Bumva.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bumva.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6C43E520CE7A65007860D8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		FA6C43E720CE7A94007860D8 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		FA6C43E920CED28D007860D8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		FA6C43EB20CED483007860D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FA6C43ED20CED510007860D8 /* MainSalesListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSalesListController.swift; sourceTree = "<group>"; };
+		FA6C43EF20CED744007860D8 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		FA6C43F220CEE02A007860D8 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		FA6C43F420CEE042007860D8 /* MainCellWithPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellWithPhoto.swift; sourceTree = "<group>"; };
+		FA6C43F720CEE569007860D8 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		FA6C446120D6FF31007860D8 /* LoadingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
+		FA6C446320D7B52C007860D8 /* EditCatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCatsCell.swift; sourceTree = "<group>"; };
+		FA6C446520D7B562007860D8 /* EditCatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCatsController.swift; sourceTree = "<group>"; };
+		FA6C446720D7EBAA007860D8 /* RegCityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegCityCell.swift; sourceTree = "<group>"; };
 		FA76982B20CDAFC30053A960 /* Bumva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumva.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA76982E20CDAFC30053A960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA76983020CDAFC30053A960 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA76983320CDAFC30053A960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA76983520CDAFC60053A960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA76983820CDAFC60053A960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FA76983A20CDAFC60053A960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +80,62 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA6C43E220CE79DC007860D8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA76982E20CDAFC30053A960 /* AppDelegate.swift */,
+				FA6C446120D6FF31007860D8 /* LoadingController.swift */,
+				FA6C43E520CE7A65007860D8 /* LoginController.swift */,
+				FA6C43E720CE7A94007860D8 /* RegistrationController.swift */,
+				FA6C43EB20CED483007860D8 /* TabBarController.swift */,
+				FA6C43ED20CED510007860D8 /* MainSalesListController.swift */,
+				FA6C43EF20CED744007860D8 /* ProfileController.swift */,
+				FA6C446520D7B562007860D8 /* EditCatsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA6C43E320CE79EF007860D8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA76983220CDAFC30053A960 /* Main.storyboard */,
+				FA76983720CDAFC60053A960 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA6C43E420CE7A2A007860D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA76983520CDAFC60053A960 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA6C43F120CEDFEE007860D8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C43F220CEE02A007860D8 /* MainCell.swift */,
+				FA6C43F420CEE042007860D8 /* MainCellWithPhoto.swift */,
+				FA6C446320D7B52C007860D8 /* EditCatsCell.swift */,
+				FA6C446720D7EBAA007860D8 /* RegCityCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA6C43F620CEE107007860D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C43F720CEE569007860D8 /* model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FA76982220CDAFC30053A960 = {
 			isa = PBXGroup;
 			children = (
 				FA76982D20CDAFC30053A960 /* Bumva */,
+				FA6C43F620CEE107007860D8 /* Model */,
 				FA76982C20CDAFC30053A960 /* Products */,
 				F278777132B0C2C4CDE21190 /* Pods */,
 				593E013922900E536B36E7EC /* Frameworks */,
@@ -78,12 +153,11 @@
 		FA76982D20CDAFC30053A960 /* Bumva */ = {
 			isa = PBXGroup;
 			children = (
-				FA76982E20CDAFC30053A960 /* AppDelegate.swift */,
-				FA76983020CDAFC30053A960 /* ViewController.swift */,
-				FA76983220CDAFC30053A960 /* Main.storyboard */,
-				FA76983520CDAFC60053A960 /* Assets.xcassets */,
-				FA76983720CDAFC60053A960 /* LaunchScreen.storyboard */,
-				FA76983A20CDAFC60053A960 /* Info.plist */,
+				FA6C43E920CED28D007860D8 /* Info.plist */,
+				FA6C43E420CE7A2A007860D8 /* Resources */,
+				FA6C43E320CE79EF007860D8 /* Storyboards */,
+				FA6C43E220CE79DC007860D8 /* Controllers */,
+				FA6C43F120CEDFEE007860D8 /* Cells */,
 			);
 			path = Bumva;
 			sourceTree = "<group>";
@@ -148,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6C43EA20CED28D007860D8 /* Info.plist in Resources */,
 				FA76983920CDAFC60053A960 /* LaunchScreen.storyboard in Resources */,
 				FA76983620CDAFC60053A960 /* Assets.xcassets in Resources */,
 				FA76983420CDAFC30053A960 /* Main.storyboard in Resources */,
@@ -200,8 +275,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA76983120CDAFC30053A960 /* ViewController.swift in Sources */,
 				FA76982F20CDAFC30053A960 /* AppDelegate.swift in Sources */,
+				FA6C43F320CEE02A007860D8 /* MainCell.swift in Sources */,
+				FA6C446420D7B52C007860D8 /* EditCatsCell.swift in Sources */,
+				FA6C43EE20CED510007860D8 /* MainSalesListController.swift in Sources */,
+				FA6C446620D7B562007860D8 /* EditCatsController.swift in Sources */,
+				FA6C446820D7EBAA007860D8 /* RegCityCell.swift in Sources */,
+				FA6C43EC20CED483007860D8 /* TabBarController.swift in Sources */,
+				FA6C446220D6FF31007860D8 /* LoadingController.swift in Sources */,
+				FA6C43E820CE7A94007860D8 /* RegistrationController.swift in Sources */,
+				FA6C43F520CEE042007860D8 /* MainCellWithPhoto.swift in Sources */,
+				FA6C43E620CE7A65007860D8 /* LoginController.swift in Sources */,
+				FA6C43F820CEE569007860D8 /* model.swift in Sources */,
+				FA6C43F020CED744007860D8 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8EAV93P97M;
-				INFOPLIST_FILE = Bumva/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Bumva/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -368,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8EAV93P97M;
-				INFOPLIST_FILE = Bumva/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Bumva/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
