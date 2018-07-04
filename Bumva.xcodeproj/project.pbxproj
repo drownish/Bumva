@@ -25,6 +25,9 @@
 		FA76983420CDAFC30053A960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA76983220CDAFC30053A960 /* Main.storyboard */; };
 		FA76983620CDAFC60053A960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA76983520CDAFC60053A960 /* Assets.xcassets */; };
 		FA76983920CDAFC60053A960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA76983720CDAFC60053A960 /* LaunchScreen.storyboard */; };
+		FAE735DB20EB857F009E049C /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE735DA20EB857F009E049C /* SaleViewController.swift */; };
+		FAE735E120ECDEDC009E049C /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE735E020ECDEDC009E049C /* CompanyViewController.swift */; };
+		FAE735E320ECE20A009E049C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE735E220ECE20A009E049C /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		FA76983320CDAFC30053A960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA76983520CDAFC60053A960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA76983820CDAFC60053A960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAE735DA20EB857F009E049C /* SaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleViewController.swift; sourceTree = "<group>"; };
+		FAE735E020ECDEDC009E049C /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		FAE735E220ECE20A009E049C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,9 @@
 				FA6C43E720CE7A94007860D8 /* RegistrationController.swift */,
 				FA6C43EB20CED483007860D8 /* TabBarController.swift */,
 				FA6C43ED20CED510007860D8 /* MainSalesListController.swift */,
+				FAE735DA20EB857F009E049C /* SaleViewController.swift */,
+				FAE735E020ECDEDC009E049C /* CompanyViewController.swift */,
+				FAE735E220ECE20A009E049C /* MapViewController.swift */,
 				FA6C43EF20CED744007860D8 /* ProfileController.swift */,
 				FA6C446520D7B562007860D8 /* EditCatsController.swift */,
 			);
@@ -258,10 +267,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bumva/Pods-Bumva-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -282,12 +293,15 @@
 				FA6C446620D7B562007860D8 /* EditCatsController.swift in Sources */,
 				FA6C446820D7EBAA007860D8 /* RegCityCell.swift in Sources */,
 				FA6C43EC20CED483007860D8 /* TabBarController.swift in Sources */,
+				FAE735DB20EB857F009E049C /* SaleViewController.swift in Sources */,
 				FA6C446220D6FF31007860D8 /* LoadingController.swift in Sources */,
 				FA6C43E820CE7A94007860D8 /* RegistrationController.swift in Sources */,
 				FA6C43F520CEE042007860D8 /* MainCellWithPhoto.swift in Sources */,
 				FA6C43E620CE7A65007860D8 /* LoginController.swift in Sources */,
 				FA6C43F820CEE569007860D8 /* model.swift in Sources */,
 				FA6C43F020CED744007860D8 /* ProfileController.swift in Sources */,
+				FAE735E120ECDEDC009E049C /* CompanyViewController.swift in Sources */,
+				FAE735E320ECE20A009E049C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
