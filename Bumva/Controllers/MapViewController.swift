@@ -18,9 +18,9 @@ class MapViewController: UIViewController {
 
         navigationItem.title = company!.company
         
-        let initialLocation = CLLocation(latitude: Double(company!.x)!, longitude: Double(company!.y)!)
+        let initialLocation = CLLocation(latitude: Double(company!.y)!, longitude: Double(company!.x)!)
         centerMapOnLocation(location: initialLocation)
-        mapView.addAnnotation
+        mapView.addAnnotation(Artwork(title: company!.company, locationName: company!.address, discipline: "", coordinate: CLLocationCoordinate2D(latitude: Double(company!.y)!, longitude: Double(company!.x)!)))
         // Do any additional setup after loading the view.
     }
 

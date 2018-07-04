@@ -25,9 +25,11 @@
 		FA76983420CDAFC30053A960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA76983220CDAFC30053A960 /* Main.storyboard */; };
 		FA76983620CDAFC60053A960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA76983520CDAFC60053A960 /* Assets.xcassets */; };
 		FA76983920CDAFC60053A960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA76983720CDAFC60053A960 /* LaunchScreen.storyboard */; };
+		FAD9C3DA20ED35240064B5A1 /* FinderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9C3D920ED35240064B5A1 /* FinderCell.swift */; };
 		FAE735DB20EB857F009E049C /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE735DA20EB857F009E049C /* SaleViewController.swift */; };
 		FAE735E120ECDEDC009E049C /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE735E020ECDEDC009E049C /* CompanyViewController.swift */; };
 		FAE735E320ECE20A009E049C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE735E220ECE20A009E049C /* MapViewController.swift */; };
+		FAE735E520ED2382009E049C /* NewSaleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE735E420ED2382009E049C /* NewSaleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,9 +54,11 @@
 		FA76983320CDAFC30053A960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA76983520CDAFC60053A960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA76983820CDAFC60053A960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAD9C3D920ED35240064B5A1 /* FinderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderCell.swift; sourceTree = "<group>"; };
 		FAE735DA20EB857F009E049C /* SaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleViewController.swift; sourceTree = "<group>"; };
 		FAE735E020ECDEDC009E049C /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		FAE735E220ECE20A009E049C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FAE735E420ED2382009E049C /* NewSaleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSaleController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				FAE735E220ECE20A009E049C /* MapViewController.swift */,
 				FA6C43EF20CED744007860D8 /* ProfileController.swift */,
 				FA6C446520D7B562007860D8 /* EditCatsController.swift */,
+				FAE735E420ED2382009E049C /* NewSaleController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				FA6C43F420CEE042007860D8 /* MainCellWithPhoto.swift */,
 				FA6C446320D7B52C007860D8 /* EditCatsCell.swift */,
 				FA6C446720D7EBAA007860D8 /* RegCityCell.swift */,
+				FAD9C3D920ED35240064B5A1 /* FinderCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -287,7 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA76982F20CDAFC30053A960 /* AppDelegate.swift in Sources */,
+				FAD9C3DA20ED35240064B5A1 /* FinderCell.swift in Sources */,
 				FA6C43F320CEE02A007860D8 /* MainCell.swift in Sources */,
+				FAE735E520ED2382009E049C /* NewSaleController.swift in Sources */,
 				FA6C446420D7B52C007860D8 /* EditCatsCell.swift in Sources */,
 				FA6C43EE20CED510007860D8 /* MainSalesListController.swift in Sources */,
 				FA6C446620D7B562007860D8 /* EditCatsController.swift in Sources */,

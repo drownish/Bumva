@@ -15,7 +15,7 @@ class CompanyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = company!.company
-        address.text = company!.address
+        address.text = "\(company!.city), \(company!.address)"
         phone.text = company!.phone
         email.text = company!.email ?? "..."
         site.text = company!.site ?? "..."

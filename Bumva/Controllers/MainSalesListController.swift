@@ -25,15 +25,16 @@ class MainSalesListController: UITableViewController, reloadHeight {
         super.viewDidLoad()
         tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.separatorColor = UIColor.white
-        loadSales()
+        loadSales(last: 0)
     }
 
     @IBAction func reloadAction(_ sender: Any) {
         allSales.removeAll()
-        loadSales()
+        tableView.reloadData()
+        loadSales(last: 0)
     }
     
-    func loadSales() {
+    func loadSales(last: Int) {
         let user = UserDefaults.standard.value(forKey: "login") as! String
         let geo = UserDefaults.standard.value(forKey: "geoId") as! String
         let excludedCats = UserDefaults.standard.value(forKey: "excludedCats") as! [Int]
@@ -47,15 +48,19 @@ class MainSalesListController: UITableViewController, reloadHeight {
         let headers = [
             "Authorization": "Basic \(base64Credentials)"]
         
-        Alamofire.request("https://www.bumva.com/v1/offers/feed/\(formattedArray)/\(geo)", method: .get, parameters: nil, encoding: URLEncoding.httpBody, headers: headers).responseJSON { resp in
+        Alamofire.request("https://www.bumva.com/v1/offers/feed/\(formattedArray)/\(geo)/\(last)", method: .get, parameters: nil, encoding: URLEncoding.httpBody, headers: headers).responseJSON { resp in
             if resp.result.isSuccess {
-                print(resp.result.value!)
+               // print(resp.result.value!)
                 guard let jsonResp = resp.result.value as? [String: Any] else {
                     print("error")
                     return
                 }
+                
+                var indexPaths = [Int]()
+                
                 if !(jsonResp["error"] as! Bool) {
                     let offers = jsonResp["offers"] as! [[String:Any]]
+                    var ix = 0
                     for sale in offers {
                         let company = sale["company"] as! [String: Any]
                         let user = sale["user"] as! [String: Any]
@@ -103,10 +108,23 @@ class MainSalesListController: UITableViewController, reloadHeight {
                                              startDate: sale["startDate"] as? String,
                                              dueDate: sale["dueDate"] as? String,
                                              status: sale["status"] as! String))
+                        
+                        indexPaths.append(ix)
+                        ix+=1
                     }
                     if self.allSales.count != 0 {
-                        self.tableView.reloadData()
-                        //self.tableView.separatorColor = UIColor.lightGray
+                        var indexs = [IndexPath]()
+                        
+                        for i in indexPaths {
+                            indexs.append(IndexPath(row: last+i, section: 0))
+                        }
+                        
+                        self.tableView.beginUpdates()
+                        self.tableView.insertRows(at: indexs, with: .automatic)
+    
+                        self.tableView.endUpdates()
+                        self.tableView.separatorColor = UIColor.lightGray
+                        
                     }
                     else {
                         let alert = UIAlertController(title: "Ошибка", message: "В вашем районе не найдено ни одной акции. Попробуйте сменить местоположение", preferredStyle: UIAlertControllerStyle.alert)
@@ -125,23 +143,23 @@ class MainSalesListController: UITableViewController, reloadHeight {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return allSales.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return allSales.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell") as! MainCell
         let photoCell = tableView.dequeueReusableCell(withIdentifier: "mainCellWithPhoto") as! MainCellWithPhoto
-        if let photo = allSales[indexPath.section].photo {
-            photoCell.mainTitle.text = allSales[indexPath.section].company.company
-            photoCell.mainSubtitle.text = "\(allSales[indexPath.section].cat.parentCat)/\(allSales[indexPath.section].cat.cat)"
-            photoCell.mainText.text = allSales[indexPath.section].description
+        if let photo = allSales[indexPath.row].photo {
+            photoCell.mainTitle.text = allSales[indexPath.row].company.company
+            photoCell.mainSubtitle.text = "\(allSales[indexPath.row].cat.parentCat)/\(allSales[indexPath.row].cat.cat)"
+            photoCell.mainText.text = allSales[indexPath.row].description
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy'-'MM'-'dd' 'HH':'mm':'ss"
-            let date = dateFormatter.date(from: allSales[indexPath.section].createdDate)
+            let date = dateFormatter.date(from: allSales[indexPath.row].createdDate)
             if Date().days(sinceDate: date!) == 0 {
                 photoCell.timeTitle.text = "\(Date().hours(sinceDate: date!) ?? 0) ч. назад"
             }
@@ -154,13 +172,13 @@ class MainSalesListController: UITableViewController, reloadHeight {
             return photoCell
         }
         else {
-            cell.mainTitle.text = allSales[indexPath.section].company.company
-            cell.mainSubtitle.text = "\(allSales[indexPath.section].cat.parentCat)/\(allSales[indexPath.section].cat.cat)"
-            cell.mainText.text = allSales[indexPath.section].description
+            cell.mainTitle.text = allSales[indexPath.row].company.company
+            cell.mainSubtitle.text = "\(allSales[indexPath.row].cat.parentCat)/\(allSales[indexPath.row].cat.cat)"
+            cell.mainText.text = allSales[indexPath.row].description
 
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy'-'MM'-'dd' 'HH':'mm':'ss"
-            let date = dateFormatter.date(from: allSales[indexPath.section].createdDate)
+            let date = dateFormatter.date(from: allSales[indexPath.row].createdDate)
             
             if Date().days(sinceDate: date!) == 0 {
                 cell.timeTitle.text = "\(Date().hours(sinceDate: date!) ?? 0) ч. назад"
@@ -174,13 +192,21 @@ class MainSalesListController: UITableViewController, reloadHeight {
         
         
     }
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return " "
+    
+    
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastRow = indexPath.row
+        if lastRow == allSales.count-1 && lastRow > 8{
+            loadSales(last: lastRow+1)
+            print("loadfrom ", lastRow+1)
+        }
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! SaleViewController
-        dest.sale = allSales[tableView.indexPathForSelectedRow!.section]
+        dest.sale = allSales[tableView.indexPathForSelectedRow!.row]
     }
     
     
